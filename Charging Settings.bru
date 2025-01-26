@@ -1,0 +1,15 @@
+meta {
+  name: Charging Settings
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/charging/settings
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

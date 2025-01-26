@@ -1,0 +1,19 @@
+meta {
+  name: Climatisation Stop
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/climatisation/requests/stop
+  body: none
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

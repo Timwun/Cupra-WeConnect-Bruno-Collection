@@ -1,0 +1,15 @@
+meta {
+  name: V5 Users vehicles mycar
+  type: http
+  seq: 21
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v5/users/{{SeatUserId}}/vehicles/{{VIN}}/mycar
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: V2 Climatisation settings change
+  type: http
+  seq: 15
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v2/vehicles/{{VIN}}/climatisation/settings
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

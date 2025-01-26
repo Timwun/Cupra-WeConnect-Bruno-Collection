@@ -1,0 +1,15 @@
+meta {
+  name: VW UserInfo
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://identity-userinfo.vwgroup.io/oidc/userinfo
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

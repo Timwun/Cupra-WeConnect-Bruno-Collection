@@ -1,0 +1,15 @@
+meta {
+  name: Connection
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/connection
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: V1 Climatisation Start
+  type: http
+  seq: 12
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/climatisation/requests/start
+  body: none
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}
