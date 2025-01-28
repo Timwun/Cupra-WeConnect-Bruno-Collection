@@ -1,0 +1,40 @@
+meta {
+  name: V1 Destination
+  type: http
+  seq: 22
+}
+
+put {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/users/vehicles/{{VIN}}/destination
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}
+
+body:json {
+  [
+    {
+      "address": {
+        "city": "",
+        "country": "",
+        "stateAbbreviation": "",
+        "street": "",
+        "houseNumber": "",
+        "zipCode": ""
+      },
+      "poiProvider": "google",
+      "geoCoordinate": {
+        "latitude": 52.432812,
+        "longitude": 10.776369
+      },
+      "destinationName": "Marker"
+    }
+  ]
+}
