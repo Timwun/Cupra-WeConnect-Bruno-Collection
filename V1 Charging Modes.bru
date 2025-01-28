@@ -1,11 +1,11 @@
 meta {
-  name: V1 Mileage
+  name: V1 Charging Modes
   type: http
-  seq: 14
+  seq: 17
 }
 
 get {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/mileage
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/modes
   body: none
   auth: bearer
 }

@@ -1,0 +1,27 @@
+meta {
+  name: V1 Charging Settings
+  type: http
+  seq: 20
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/settings
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}
+
+body:json {
+  {
+    "maxChargeCurrentAc": "maximum",
+    "autoUnlockPlugWhenChargedAc": "off",
+    "targetSoc": 80.0
+  }
+}

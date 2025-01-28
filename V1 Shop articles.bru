@@ -1,17 +1,18 @@
 meta {
-  name: Charging Start
+  name: V1 Shop articles
   type: http
-  seq: 7
+  seq: 16
 }
 
-post {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/charging/requests/stop
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/shop/vehicles/{{VIN}}/articles
   body: none
   auth: bearer
 }
 
 headers {
   Content-Type: application/json
+  Accept-Language: de_DE
 }
 
 auth:bearer {

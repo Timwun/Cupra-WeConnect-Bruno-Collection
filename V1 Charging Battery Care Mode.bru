@@ -1,0 +1,25 @@
+meta {
+  name: V1 Charging Battery Care Mode
+  type: http
+  seq: 21
+}
+
+put {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/requests/battery-care-mode
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}
+
+body:json {
+  {
+    "batteryCareModeEnabled": true
+  }
+}

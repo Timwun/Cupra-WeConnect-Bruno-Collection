@@ -1,7 +1,7 @@
 meta {
   name: V2 Climatisation settings change
   type: http
-  seq: 15
+  seq: 27
 }
 
 post {
@@ -16,4 +16,15 @@ headers {
 
 auth:bearer {
   token: {{access_token_set_by_collection_script}}
+}
+
+body:json {
+  {
+    "windowHeatingEnabled": false,
+    "zoneFrontLeftEnabled": true,
+    "zoneFrontRightEnabled": false,
+    "targetTemperature": 22.0,
+    "targetTemperatureUnit": "celsius",
+    "climatisationAtUnlock": false
+  }
 }
