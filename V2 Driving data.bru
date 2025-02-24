@@ -1,0 +1,19 @@
+meta {
+  name: V2 Driving data
+  type: http
+  seq: 37
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/driving-data/foobar
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token_set_by_collection_script}}
+}
+
+docs {
+  Needs intervalType
+}

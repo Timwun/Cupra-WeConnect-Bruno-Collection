@@ -5,11 +5,18 @@ meta {
 }
 
 get {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/driving-data/test
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/driving-data/shortTerm
   body: none
   auth: bearer
 }
 
 auth:bearer {
   token: {{access_token_set_by_collection_script}}
+}
+
+docs {
+  Possible options:
+  - cyclic
+  - longTerm
+  - shortTerm
 }
