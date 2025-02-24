@@ -1,11 +1,11 @@
 meta {
-  name: V1 Climatisation Start
+  name: V1 Ventilation Start
   type: http
-  seq: 24
+  seq: 28
 }
 
 post {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/climatisation/requests/start
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/ventilation/start
   body: none
   auth: bearer
 }

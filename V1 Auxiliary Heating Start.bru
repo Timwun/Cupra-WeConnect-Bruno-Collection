@@ -1,17 +1,18 @@
 meta {
-  name: V1 Climatisation Start
+  name: V1 Auxiliary Heating Start
   type: http
-  seq: 24
+  seq: 26
 }
 
 post {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/climatisation/requests/start
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/auxiliary-heating/start
   body: none
   auth: bearer
 }
 
 headers {
   Content-Type: application/json
+  SecToken: 
 }
 
 auth:bearer {
