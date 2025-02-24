@@ -13,3 +13,18 @@ get {
 auth:bearer {
   token: {{access_token_set_by_collection_script}}
 }
+
+docs {
+  Response:
+  
+  {
+    "settings": {
+      "maxChargeCurrentAC": "maximum",
+      "carCapturedTimestamp": "2025-01-01T10:00:00Z",
+      "autoUnlockPlugWhenCharged": "off",
+      "targetSoc_pct": 80,
+      "batteryCareModeEnabled": true,
+      "batteryCareTargetSocPercentage": 80
+    }
+  }
+}

@@ -13,3 +13,33 @@ get {
 auth:bearer {
   token: {{access_token_set_by_collection_script}}
 }
+
+docs {
+  Response:
+  
+  {
+    "status": {
+      "battery": {
+        "carCapturedTimestamp": "2025-01-01T10:00:00Z",
+        "currentSOC_pct": 80,
+        "cruisingRangeElectric_km": 250
+      },
+      "charging": {
+        "carCapturedTimestamp": "2025-01-01T10:00:00Z",
+        "remainingChargingTimeToComplete_min": 0,
+        "chargingState": "notReadyForCharging",
+        "chargePower_kW": 0,
+        "chargeRate_kmph": 0,
+        "chargeType": "invalid",
+        "chargeMode": "manual",
+        "chargingSettings": "default"
+      },
+      "plug": {
+        "carCapturedTimestamp": "2025-01-01T10:00:00Z",
+        "plugConnectionState": "disconnected",
+        "plugLockState": "unlocked",
+        "externalPower": "unavailable"
+      }
+    }
+  }
+}
