@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/charging/requests/stop
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/charging/requests/start
   body: none
   auth: bearer
 }
@@ -21,7 +21,9 @@ auth:bearer {
 docs {
   Response:
   
+  ```
   {
     "requestId": "00000000-0000-0000-0000-000000000000"
   }
+  ```
 }
