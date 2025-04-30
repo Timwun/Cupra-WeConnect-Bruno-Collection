@@ -29,9 +29,3 @@ vars:pre-request {
 script:pre-request {
     
 }
-
-script:post-response {
-  if(req.getAuthMode() == 'oauth2' && res.body.access_token) {
-      bru.setVar('access_token_set_by_collection_script', res.body.access_token);
-  }
-}
