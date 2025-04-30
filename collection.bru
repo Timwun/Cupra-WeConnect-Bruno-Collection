@@ -7,11 +7,18 @@ auth:oauth2 {
   callback_url: cupra://oauth-callback
   authorization_url: https://identity.vwgroup.io/oidc/v1/authorize
   access_token_url: https://identity.vwgroup.io/oidc/v1/token
+  refresh_token_url: https://identity.vwgroup.io/oidc/v1/token
   client_id: 3c756d46-f1ba-4d78-9f9a-cff0d5292d51@apps_vw-dilab_com
   client_secret: eb8814e641c81a2640ad62eeccec11c98effc9bccd4269ab7af338b50a94b3a2
   scope: openid profile nickname birthdate phone cars badge dealers
   state: 
   pkce: false
+  credentials_placement: basic_auth_header
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: true
+  auto_refresh_token: true
 }
 
 vars:pre-request {

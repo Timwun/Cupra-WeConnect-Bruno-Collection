@@ -7,13 +7,9 @@ meta {
 get {
   url: https://ola.prod.code.seat.cloud.vwgroup.com/v2/vehicles/{{VIN}}/selectivestatus?jobs=measurements,temperatureBatteryStatus
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
   jobs: measurements
-}
-
-auth:bearer {
-  token: {{access_token_set_by_collection_script}}
 }

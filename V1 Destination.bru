@@ -7,15 +7,11 @@ meta {
 put {
   url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/users/vehicles/{{VIN}}/destination
   body: json
-  auth: bearer
+  auth: inherit
 }
 
 headers {
   Content-Type: application/json
-}
-
-auth:bearer {
-  token: {{access_token_set_by_collection_script}}
 }
 
 body:json {

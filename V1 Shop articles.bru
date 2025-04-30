@@ -7,14 +7,10 @@ meta {
 get {
   url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/shop/vehicles/{{VIN}}/articles
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 headers {
   Content-Type: application/json
   Accept-Language: de_DE
-}
-
-auth:bearer {
-  token: {{access_token_set_by_collection_script}}
 }

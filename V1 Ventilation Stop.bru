@@ -7,13 +7,9 @@ meta {
 post {
   url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/ventilation/stop
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 headers {
   Content-Type: application/json
-}
-
-auth:bearer {
-  token: {{access_token_set_by_collection_script}}
 }
