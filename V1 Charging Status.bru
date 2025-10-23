@@ -1,0 +1,40 @@
+meta {
+  name: V1 Charging Status
+  type: http
+  seq: 24
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/status
+  body: none
+  auth: inherit
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+    "state": "charging",
+    "battery": {
+      "chargeEnergyInKwh": 10,
+      "currentSocPercentage": 55,
+      "estimatedRangeInKm": 230
+    },
+    "charging": {
+      "remainingTimeInMinutes": 80,
+      "state": "charging",
+      "chargedPowerInKw": 10.5,
+      "rateInKmph": 64,
+      "type": "ac",
+      "mode": "manual",
+      "settings": "default"
+    },
+    "plug": {
+      "connection": "connected",
+      "externalPower": "active",
+      "lock": "locked"
+    }
+  }
+  ```
+}
