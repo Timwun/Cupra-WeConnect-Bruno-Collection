@@ -1,0 +1,22 @@
+meta {
+  name: Charging Statistics Power Curve
+  type: http
+  seq: 53
+}
+
+get {
+  url: https://prod.emea.mobile.charging.cariad.digital/charging_statistics/XXX/power-curve
+  body: none
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept-Encoding: gzip
+  Accept-Language: de-DE
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

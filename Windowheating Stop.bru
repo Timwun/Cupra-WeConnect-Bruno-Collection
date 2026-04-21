@@ -1,11 +1,11 @@
 meta {
-  name: Charging Start
+  name: Windowheating Stop
   type: http
-  seq: 47
+  seq: 51
 }
 
 post {
-  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/charging/requests/start
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/windowheating/requests/stop
   body: none
   auth: inherit
 }

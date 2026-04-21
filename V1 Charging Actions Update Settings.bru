@@ -1,0 +1,21 @@
+meta {
+  name: V1 Charging Actions Update Settings
+  type: http
+  seq: 26
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/actions/update-settings
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "targetSocPercentage": 80
+  }
+}

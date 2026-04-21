@@ -1,0 +1,66 @@
+meta {
+  name: Climatisation Requests Timers
+  type: http
+  seq: 49
+}
+
+post {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/vehicles/{{VIN}}/climatisation/requests/timers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "timers": [
+          {
+              "id": 1,
+              "enabled": true,
+              "recurringTimer": {
+                  "startTime": "05:15",
+                  "recurringOn": {
+                      "mondays": true,
+                      "tuesdays": true,
+                      "wednesdays": true,
+                      "thursdays": true,
+                      "fridays": false,
+                      "saturdays": false,
+                      "sundays": false
+                  }
+              }
+          },
+          {
+              "id": 2,
+              "enabled": false,
+              "recurringTimer": {
+                  "startTime": "14:30",
+                  "recurringOn": {
+                      "mondays": true,
+                      "tuesdays": true,
+                      "wednesdays": true,
+                      "thursdays": true,
+                      "fridays": false,
+                      "saturdays": false,
+                      "sundays": false
+                  }
+              }
+          }
+      ]
+  }
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+    "requestId": "00000000-0000-0000-0000-000000000000"
+  }
+  ```
+  
+  StartTime is in UTC
+}

@@ -1,0 +1,21 @@
+meta {
+  name: V1 Remote Availability / Connection
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/remote-availability
+  body: none
+  auth: inherit
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+    "remote-availability": "online"
+  }
+  ```
+}

@@ -1,0 +1,21 @@
+meta {
+  name: V1 Charging Battery Care Target
+  type: http
+  seq: 11
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/vehicles/{{VIN}}/charging/battery-care/target
+  body: none
+  auth: inherit
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+    "targetSocPercentage": 80
+  }
+  ```
+}

@@ -1,0 +1,24 @@
+meta {
+  name: V2 Charging Modes
+  type: http
+  seq: 37
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v2/vehicles/{{VIN}}/charging/modes
+  body: none
+  auth: inherit
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+    "selected": "immediate",
+    "available": [
+      "immediate"
+    ]
+  }
+  ```
+}

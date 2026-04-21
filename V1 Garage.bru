@@ -1,0 +1,52 @@
+meta {
+  name: V1 Garage
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://ola.prod.code.seat.cloud.vwgroup.com/v1/users/{{SeatUserId}}/garage
+  body: none
+  auth: inherit
+}
+
+docs {
+  Response:
+  
+  ```
+  {
+      "vehicles": [
+          {
+              "vin": "VSSZZZXXXXXXXXXXX",
+              "enrollmentStatus": "completed",
+              "userRole": "primary",
+              "vehicleNickname": "Voyager",
+              "preEnrolled": false,
+              "specifications": {
+                  "salesType": "XXXXXX",
+                  "colors": {
+                      "exterior": "5V",
+                      "interior": "UC",
+                      "roof": "5V"
+                  },
+                  "wheels": {
+                      "rims": "F35",
+                      "tires": "J49"
+                  },
+                  "steeringRight": false,
+                  "sunroof": false,
+                  "heatedSeats": true,
+                  "factoryModel": {
+                      "vehicleBrand": "cupra",
+                      "vehicleModel": "born",
+                      "modYear": "2024"
+                  },
+                  "marketEntry": "3.5",
+                  "modVersion": "mod4",
+                  "carBody": "default"
+              }
+          }
+      ]
+  }
+  ```
+}
