@@ -15,15 +15,11 @@ auth:oauth2 {
   pkce: false
   credentials_placement: basic_auth_header
   credentials_id: credentials
+  token_source: access_token
   token_placement: header
   token_header_prefix: Bearer
   auto_fetch_token: true
   auto_refresh_token: true
-}
-
-vars:pre-request {
-  VIN: <REPLACE_ME>
-  SeatUserId: <REPLACE_ME>
 }
 
 script:pre-request {
